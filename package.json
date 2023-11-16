@@ -1,0 +1,30 @@
+{
+  "name": "@splunk/compassion-splunk-poc",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "build": "lerna run build",
+    "format": "git ls-files | grep -E \"\\.(jsx?|css)$\" | xargs prettier --write",
+    "format:verify": "git ls-files | grep -E \"\\.(jsx?|css)$\" | xargs prettier --list-different",
+    "lint": "lerna run lint --no-sort",
+    "setup": "yarn && lerna run build",
+    "start": "lerna run start --stream --no-sort --concurrency 100",
+    "test": "lerna run test --stream --no-sort"
+  },
+  "devDependencies": {
+    "lerna": "^2.9.0",
+    "prettier": "^2.0.5"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=8"
+  },
+  "dependencies": {
+    "@splunk/react-icons": "^4.1.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "styled-components": "^5.3.11"
+  }
+}
